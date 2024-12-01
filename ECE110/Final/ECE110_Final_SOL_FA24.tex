@@ -16,6 +16,7 @@ This worksheet does not cover content in lectures after November 25th and is not
 
 \section*{Formulas not on the help sheet}
 \textbf{Note:} All formulas required for the questions are assumed to be known, as they are not provided in this sheet.
+
 \begin{center}
     \includegraphics[width=0.75\linewidth]{figures/image.png}
 \end{center}
@@ -37,9 +38,39 @@ This worksheet does not cover content in lectures after November 25th and is not
 
 \textbf{Question 2:} If a 15 kWh battery has to be recharged using a 60\% efficient generator with peak power of 500 W, how long does the generator need to run to fully charge the battery?
 
+\textbf{Solution:}
+\begin{align*}
+    \text{Generator Output} = 500 \cdot 0.6 = 300 W  \\
+    15 kWh = 15 kWh \cdot 1000   \frac{W}{kW}  = 15000 Wh\\
+    \frac{15000 Wh}{300 W} = \boxed{50 hours} \\
+\end{align*}
+
+
+
+
+
+
+
+
 \textbf{Question 3:} What is the energy stored in a 4 nF capacitor charged to 9V?
+\textbf{Solution:}
+\begin{align*}
+    E = \frac{1}{2}CV^{2}\\
+    E = \frac{1}{2}\cdot 4\cdot 10^{-9}\cdot(9)^{2}\\
+    E =  \boxed{1.62 \cdot 10^{-7} J}\\
+\end{align*}
+
 
 \textbf{Question 4:} What voltage is needed to charge the capacitor from the above question enough to lift a 2-gram mass 15 cm?
+
+\textbf{Solution:}
+\begin{align*}
+    PE = mgh\\
+    PE = 2g\cdot \frac{kg}{1000 g} \cdot9.81 \cdot 15cm \cdot \frac{m}{100 cm} = 0.002943 J\\ 
+    \frac{1}{2}CV^{2} =  0.002943\\
+    V = \boxed{1213 V}
+\end{align*}
+
 
 \section*{Kirchoff's Laws/Dividers}
 
@@ -49,11 +80,38 @@ This worksheet does not cover content in lectures after November 25th and is not
 
 \textbf{Question 5:} Given the above circuit and information, find V1, V3, V6, I2, I4, and I5.
 
+\textbf{Solution:}
+\begin{align*}
+    \text{Make KVL loops}\\
+    V1 - 16 - V3 = 0\\ 
+    V3 - 14 - 20 = 0  \\
+    V1 - 16 - 14 - 20 = 0\\
+    V1 - V6 - 20 = 0 \\
+     \text{Solve KVL loops}\\
+    \boxed{V3 = 34 V}\\
+    \boxed{V1 = 50V} \\
+    \boxed{V6 = 30V}\\
+    \text{Make KCL equations}\\
+    0 = 2 + I2 + I6\\
+    I2 = 3 + I4\\
+    I4 + 0 = I5\\
+    2 + 3 + I5 = 0\\
+    \text{Solve KCL equations}\\
+    \boxed{I2 = -18 A}\\
+    \boxed{I5 = -5 A}\\
+    \boxed{I4 = -5A }\\
+\end{align*}
+
 \begin{center}
     \includegraphics[width=0.75\linewidth]{figures/3.png}
 \end{center}
 
 \textbf{Question 6:} Find V1 in the above circuit.
+
+\textbf{Solution:}
+\begin{align*}
+\end{align*}
+
 
 \begin{center}
 
@@ -62,13 +120,38 @@ This worksheet does not cover content in lectures after November 25th and is not
 \end{center}
 
 
-\textbf{Question 7:} What value of R will result in Vo = 1V?
 
+\textbf{Question 7:} What value of R will result in Vo = 1V?
+\textbf{Solution:}
+\begin{align*}
+ \text{If Vo = 1V, voltage across R3 and R2 and R is 1V}\\
+    4 - 9(I1) - 1 = 0\\
+    I1 = 1/3 A\\
+    15(I3) = 1\\
+    I3 = 1/15 A\\
+    10(I2) = 1\\
+    I2 = 1/10 A\\
+    I1 = I2 + I3 + I\\
+    1/3 = 1/10 + 1/15 + I\\
+    I = 0.16667 A\\
+    IR = 1\\
+    0.16667(R) = 1\\
+    \boxed{R =  6 ohms}\\
+\end{align*}
+ 
 \begin{center}
 \includegraphics[width=0.75\linewidth]{figures/6.png}
 \end{center}
 
 \textbf{Question 8:} Find I in the above circuit.
+\textbf{Solution
+}
+\begin{align*}
+    \text{Combine 3 kOhm and 6 kOhm to 2 kOhm}\\
+    \text{Current divier rule}\\ 
+    I = (22/1000) \cdot(2/(2+2) \\
+    \boxed{I = 0.011 A}
+\end{align*}
 
 \section*{Equivalent Resistance / Power}
 \textbf{Question 9:} Find equivalent resistance for the circuits below.
@@ -139,18 +222,50 @@ Thus, the total equivalent resistance is \( R_{\text{eq}} = 6 \, \Omega \).
 \textbf{Question 10:} If the voltage between nodes A and B in the second circuit is 9V...
 \begin{enumerate}
 \item What is the current through the 3 ohm resistor?
+\begin{align*}
+    \text{We can simplify to 2 Ohm and 4 Ohm in series}\\
+    V4 = 9 \cdot (4/6) = 6 V\\
+    \text{The 4 ohm is a 6 ohm and 12 Ohm in parallel}\\
+    I6 = (6/4)\cdot(12/18) = 1A\\
+    \boxed{I3 = 1 A}\\
+\end{align*}
 \item What is the power through the 3 ohm resistor?
+\begin{align*}
+    P = I^{2}R\\
+    P = (1)(3) = 3W\\
+    \boxed{P = 3W}\\
+\end{align*}
 \item What is the power through the 8 ohm resistor?
+\begin{align*}
+   I8 = (6/4)\cdot (6/18) = 0.5 A\\
+    P = I^{2}R = (0.5)^{2} \cdot 8\\
+   \boxed{P = 2W}\\
+\end{align*}
 \item What resistor has the highest power output?
+\begin{align*}
+   \text{The 3 ohm resistor has a higher power output than the 8 ohm resistor}
+\end{align*}
 \end{enumerate}
 
 \section*{PWM}
 \textbf{Question 11:} Imagine a square wave that outputs 15W from 0 to 12 seconds and 5W from 12 to 20 seconds. This square wave corresponds to a 10 ohm resistor.
 \begin{enumerate}
     \item What is the Average Power of this waveform?
+\begin{align*}
+   P = ((15)(12) + (5)(8))/20 = 11 W\\
+   \boxed{P = 11 W}\\
+\end{align*}
     \item What is the RMS Voltage of this waveform?
+\begin{align*}
+   Vrms  = ((Pavg)(R))^{1/2}= 10.49 V\\
+   \boxed{Vrms = 10.49 V}\\
+\end{align*}
 \end{enumerate}
 \textbf{Question 12:} Given a limited portion of this graphed waveform, what is its duty cycle?
+\begin{align*}
+   \text{The period is T = 4}\\
+   Ton/T \cdot 100 = \boxed{50}\\
+\end{align*}
 
 \begin{center}
 
@@ -167,7 +282,29 @@ Thus, the total equivalent resistance is \( R_{\text{eq}} = 6 \, \Omega \).
 
 \end{center}
 
+\textbf{Solution:}
+\begin{align*}
+    \text{Let's label current through 5Ohm as I1 and current through 20Ohm as I2}\\
+    I1 + 3 = I2 \\
+    25 - 5I1 - 20(I1 + 3) = 0\\
+    I1 = -1.4\\
+    I2 = -1.6\\
+    Voc = (I2)(20) = \boxed{32V}\\
+    Rt = 8 Ohms\\
+    Isc = 32/8 = \boxed{4A}\\
+\end{align*}
 \textbf{Question 14:} If this circuit were to be placed in series with another circuit with an IV equation of \(I = 0.005V - 0.025\), assuming the same polarities given above, what would be the operating current and voltage?
+
+\textbf{Solution:}
+\begin{align*}
+    \text{Let's write an equation to represent the previous circuit}\\
+    I = -0.125V +4\\
+     \text{Combine the two equations}\\
+    -0.125V +4 = 0.005V - 0.025\\
+    0.13V  = 4.025\\
+    V = \boxed{30.96 V}\\
+    I = \boxed{0.13 A}\\
+\end{align*}
 
 \textbf{Question 15:} If the open circuit voltage of a circuit containing ideal sources and resistors is measured at Voc = 8 V, while the current through the short circuit across the circuit is Isc = 200 mA, what would be the power in watts absorbed by an ideal voltage source, Vs = 4, placed across the terminals?
 
@@ -176,11 +313,31 @@ Thus, the total equivalent resistance is \( R_{\text{eq}} = 6 \, \Omega \).
 
 \end{center}
 
+\textbf{Solution:}
+\begin{align*}
+    \text{Let's find R thevenin}\\
+   R = Voc/Isc = (8)/(200/1000) = 40 ohms\\
+   I = Vnet/R = (8 -4)/40 = 0.1 A\\
+   P = VI = (0.1)(4) = \boxed{0.4 W}
+\end{align*}
+
+
+
 \section*{Norton and Thevenin}
 \textbf{Question 16:} Give Norton and Thevenin Forms for the subcircuit shown on the previous page.
 
+\textbf{Solution: }
+\begin{align*}
+    \text{The thevenin voltage is the open circuit voltage and the norton current is the short circuit current}\\
+\end{align*}
+
 \textbf{Question 17:} What is the Norton resistance of the circuit below? What is the Thevenin Resistance?
 
+\textbf{Solution:}
+\begin{align*}
+    \text{Let's short the voltage sources and open the current sources. So now they are in series}\\
+  R = 8 + 4 + 5 + 8 = \boxed{25 ohms}\\
+\end{align*}
 \textbf{Question 18:} Draw the Thevenin and Norton Equivalents.
 
 \begin{center}
@@ -191,7 +348,22 @@ Thus, the total equivalent resistance is \( R_{\text{eq}} = 6 \, \Omega \).
 \section*{Nodal Analysis}
 \textbf{Question 19:} Find the voltage at node A for this circuit.
 
+\textbf{Solution:}
+\begin{align*}
+    \text{This is a nodal analysis problem}\\
+  ( 10 - A)/10 + 2 = A/20\\
+  A = \boxed{20 V}
+\end{align*}
 \textbf{Question 20:} Find the voltage drop across the 10, 30, and 50 ohm resistors.
+\textbf{Solution:}
+\begin{align*}
+    \text{The drop across the 10 ohm is a gain of 10V}\\
+    \text{Let's call the node between the 30ohm, 50ohm, 2A node D}\\
+    D/30 + 2 = (10 - D)/50\\
+    D =  -33.75\\
+    \text{The drop across the 50ohm is a drop of 43.75V}\\
+    \text{The drop across the 30 ohm is a gain of 33.75V}\\
+\end{align*}
 
 \begin{center}
     \includegraphics[width=0.75\linewidth]{figures/34.png}
@@ -317,6 +489,12 @@ Since $V_{CE}$ is in the range $V_{CE,sat} < V_{CE} < V_{CC}$, we know our assum
 \section*{MOSFETs/cMOS logic}
 \textbf{Question 25:} An IC dissipates 110W. If the IC has a 5\% activity factor \(\alpha\), frequency of 10GHz, and 1nF gate capacitance, what is the maximum number of transistors that can be in the IC if it can operate at up to 9V?
 
+\textbf{Solution:}
+\begin{align*}
+    P = \text{(activity factor)}(C)(v^{2})f\\
+    \text{num of transistors = } 110/((0.05)(1 * 10^{-9})(9^{2})(10*10^{9}))\\
+    \text{num of transistors = } \boxed{2.7 billion}\\
+\end{align*}
 \begin{center}
 
         \includegraphics[width=1\linewidth]{figures/78.png}
@@ -324,6 +502,14 @@ Since $V_{CE}$ is in the range $V_{CE,sat} < V_{CE} < V_{CC}$, we know our assum
 
 \textbf{Question 26:} The given circuit with a MOSFET in series with a voltage source of 6V and a resistor with a resistance of 120\(\Omega\)
 Find the transistor parameter k and a value for VDS that results in I = 30 mA, given that VGS - VTH = 2.
+\textbf{Solution:}
+\begin{align*}
+   \text{Id = k(Vgs - Vth)(Vgs - Vth), solve for k}\\
+   \boxed{k = 7.5 \cdot 10^{-3}}\\
+   Vr = 30 \cdot 10^{-3} \cdot 120 = 3.6\\
+   Vds = 6 - 3.6 = \boxed{2.4}\\ 
+\end{align*}
+ 
 
 \section*{Bonus Questions}
 
